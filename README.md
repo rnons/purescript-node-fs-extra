@@ -4,19 +4,16 @@
 
 A PureScript binding to [fs-extra](https://www.npmjs.com/package/fs-extra).
 
-## Why?
-
-Because `ensureDir`/`remove` create/delete directories recusively.
 
 ## Supported functions
 
-- copy
-- emptyDir
-- ensureFile
-- ensureDir
-- ensureLink
-- ensureSymlink
-- move
-- outputFile
-- pathExists
-- remove
+- `copy`
+- `emptyDir`
+- `ensureFile`
+- `ensureDir`
+- `ensureLink`
+- `ensureSymlink`
+- `move`
+- `outputFile`
+- `pathExists`
+- `remove`

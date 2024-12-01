@@ -19,19 +19,20 @@ import Effect.Uncurried (EffectFn1, EffectFn2, runEffectFn1, runEffectFn2)
 import Node.Buffer (Buffer)
 import Node.Path (FilePath)
 
-foreign import unsafeRequireFS :: forall r. { |r }
-fs ::
-  { copy :: EffectFn2 FilePath FilePath (Promise Unit)
-  , emptyDir :: EffectFn1 FilePath (Promise Unit)
-  , ensureDir :: EffectFn1 FilePath (Promise Unit)
-  , ensureFile :: EffectFn1 FilePath (Promise Unit)
-  , ensureLink :: EffectFn2 FilePath FilePath (Promise Unit)
-  , ensureSymlink :: EffectFn2 FilePath FilePath (Promise Unit)
-  , move :: EffectFn2 FilePath FilePath (Promise Unit)
-  , outputFile :: EffectFn2 FilePath Buffer (Promise Unit)
-  , pathExists :: EffectFn1 FilePath (Promise Boolean)
-  , remove :: EffectFn1 FilePath (Promise Unit)
-  }
+foreign import unsafeRequireFS :: forall r. { | r }
+
+fs
+  :: { copy :: EffectFn2 FilePath FilePath (Promise Unit)
+     , emptyDir :: EffectFn1 FilePath (Promise Unit)
+     , ensureDir :: EffectFn1 FilePath (Promise Unit)
+     , ensureFile :: EffectFn1 FilePath (Promise Unit)
+     , ensureLink :: EffectFn2 FilePath FilePath (Promise Unit)
+     , ensureSymlink :: EffectFn2 FilePath FilePath (Promise Unit)
+     , move :: EffectFn2 FilePath FilePath (Promise Unit)
+     , outputFile :: EffectFn2 FilePath Buffer (Promise Unit)
+     , pathExists :: EffectFn1 FilePath (Promise Boolean)
+     , remove :: EffectFn1 FilePath (Promise Unit)
+     }
 fs = unsafeRequireFS
 
 -- | Copy a file or directory. The directory can have contents. Like `cp -r`.

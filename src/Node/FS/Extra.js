@@ -1,1 +1,1 @@
-exports.unsafeRequireFS = require("fs-extra");
+export * as unsafeRequireFS from "fs-extra"
