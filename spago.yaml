@@ -1,0 +1,14 @@
+package:
+  name: node-fs-extra
+  dependencies:
+    - aff-promise
+    - node-buffer
+    - node-path
+  test:
+    main: Test.Main
+    dependencies:
+      - spec
+      - spec-node
+workspace:
+  packageSet:
+    registry: 61.2.0
